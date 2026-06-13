@@ -1729,17 +1729,17 @@
     </div>
     <div class="stack-row" style="margin-top:4.5vh">
       <div class="stack-block b-grey">
-        <span class="layer-nb">01 · BAD</span>
-        <div class="layer-ttl" style="font-size:max(17px,1.7vw)">包一層 DOM click</div>
-        <pre style="font-family:var(--mono);font-size:max(16px,.9vw);line-height:1.55;margin-top:1.6vh;overflow:hidden">execute: () =&gt; {
+        <span class="layer-nb" style="opacity:1"><span style="font-weight:700;color:var(--ink)">✗</span>&nbsp;&nbsp;01 · BAD</span>
+        <div class="layer-ttl" style="font-size:max(17px,1.7vw);text-decoration:line-through;text-decoration-color:var(--grey-3);opacity:.7">包一層 DOM click</div>
+        <pre style="font-family:var(--mono);font-size:max(16px,.9vw);line-height:1.55;margin-top:1.6vh;overflow:hidden;opacity:.78">execute: () =&gt; {
   document.querySelector(
     '.btn-submit'
   )?.click();
 };</pre>
         <div class="layer-desc" style="margin-top:auto">本質還是 UI automation，UI 一改照樣壞。</div>
       </div>
-      <div class="stack-block b-ink">
-        <span class="layer-nb">02 · BETTER</span>
+      <div class="stack-block" style="background:var(--paper);border:1px solid var(--grey-2);border-top:3px solid var(--accent);color:var(--ink)">
+        <span class="layer-nb" style="opacity:1"><span style="font-weight:700;color:var(--accent)">✓</span>&nbsp;&nbsp;02 · BETTER</span>
         <div class="layer-ttl" style="font-size:max(17px,1.7vw)">寫入 form state</div>
         <pre style="font-family:var(--mono);font-size:max(16px,.9vw);line-height:1.55;margin-top:1.6vh;overflow:hidden">execute: async input =&gt; {
   leaveFormStore.patch(input);
@@ -1750,7 +1750,7 @@
         <div class="layer-desc" style="margin-top:auto">不依賴 selector，走既有驗證，錯誤講得出是哪個欄位。</div>
       </div>
       <div class="stack-block b-accent">
-        <span class="layer-nb">03 · BEST</span>
+        <span class="layer-nb" style="opacity:1"><span style="font-weight:700;color:#fff">✓</span>&nbsp;&nbsp;03 · BEST</span>
         <div class="layer-ttl" style="font-size:max(17px,1.7vw)">接 domain action</div>
         <pre style="font-family:var(--mono);font-size:max(16px,.9vw);line-height:1.55;margin-top:1.6vh;overflow:hidden">execute: async input =&gt;
   leaveRequestActions
@@ -1879,6 +1879,9 @@
       </div>
       <div class="half" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
         <div data-anim="rules" style="display:flex;flex-direction:column;gap:0">
+          <div style="margin-bottom:2.4vh">
+            <span style="font-family:var(--sans);font-weight:600;font-size:max(15px,1.04vw);letter-spacing:.2em;color:var(--accent)">TAKEAWAYS</span>
+          </div>
           <div style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
             <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">01</div>
             <div>
