@@ -1222,8 +1222,11 @@
       </div>
       <div data-anim="bottom" style="display:grid;grid-template-rows:auto auto;gap:1.6vh;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh">
         <div data-anim="lead" class="lead" style="max-width:56ch;color:rgba(255,255,255,.86);font-weight:300">以 WebMCP 思考 Agent-ready Web App 的前端架構</div>
-        <div style="display:flex;justify-content:space-between;align-items:end">
-          <div class="t-meta" style="color:rgba(255,255,255,.6)">ANDY · 15 MIN TECH SHARE</div>
+        <div style="display:flex;justify-content:flex-end;align-items:end">
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4vh">
+            <span style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:min(2vw,3.4vh);line-height:.95;letter-spacing:-.01em;color:#fff">Andy</span>
+            <span style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(13px,.82vw);letter-spacing:.01em;color:rgba(255,255,255,.66)">Staff AI Engineer · Dentsu</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1610,16 +1613,56 @@
   </div>
 </section>
 
-<!-- ============ 11 · S08 Duo Compare · Demo 1 · Pet Commerce Benchmark ============ -->
+<!-- ============ 11 · S08 Duo Compare · 場景光譜（demo 段開場：先講在哪用）============ -->
+<section class="slide light" data-animate="duo-mirror" data-layout="S08">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">Adoption · Where to Start</div>
+      <div class="r">11 / 18</div>
+    </div>
+    <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+      <div class="t-meta">APPLICATION SCENARIOS · B2B / B2C</div>
+      <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.4vw,9.4vh);line-height:1;letter-spacing:-.03em">應用場景：內部系統 × 對外網站</h2>
+    </div>
+    <div class="duo-compare" style="margin-top:5vh">
+      <div class="col">
+        <div class="col-tag"><span class="num">B2B</span><span>FIRST WAVE · INTERNAL</span></div>
+        <div class="col-ttl" style="font-size:min(3.4vw,6vh)">企業內部系統先試</div>
+        <div class="col-desc">任務明確、流程固定、資料敏感——而且權限與表單驗證本來就有。Agent 透過明確 tool 進入既有流程。</div>
+        <ul class="col-list">
+          <li>請假、報支、採購、CRM、ERP、簽核</li>
+          <li>復用既有 validation 與 workflow</li>
+          <li>搭配 local model，降低敏感資料外送需求</li>
+        </ul>
+      </div>
+      <span class="vrule"></span>
+      <div class="col accent">
+        <div class="col-tag"><span class="num">B2C</span><span>ENDGAME · AGENT EXPERIENCE</span></div>
+        <div class="col-ttl" style="font-size:min(3.4vw,6vh)">對外網站的長期賽局</div>
+        <div class="col-desc">未來使用者不一定親自逛網站——他派 Agent 比價、篩選、預約、下單。</div>
+        <ul class="col-list">
+          <li>電商：搜尋商品、加入購物車、查訂單</li>
+          <li>訂票／旅遊：查場次、建立 booking intent</li>
+          <li><strong style="font-weight:600;color:var(--accent)">沒有 AX 的網站，會被 Agent 直接跳過</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:auto;padding-top:2vh;border-top:1px solid var(--border-subtle);display:flex;align-items:baseline">
+      <span class="t-body" style="font-weight:400">WebMCP 的價值不是取代既有的權限與驗證，而是讓 Agent 走進既有流程。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 · S08 Duo Compare · Demo 1 · Pet Commerce Benchmark ============ -->
 <section class="slide light" data-animate="duo-mirror" data-layout="S08">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Demo 1 · Pet Commerce Benchmark</div>
-      <div class="r">11 / 18</div>
+      <div class="r">12 / 18</div>
     </div>
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
       <div class="t-meta">SAME TASK · TWO WAYS · LIVE BENCHMARK</div>
-      <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1.04;letter-spacing:-.03em">同一個購物任務，WebMCP 快多少？</h2>
+      <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1.04;letter-spacing:-.03em">Demo 1：寵物電商，WebMCP 快多少？</h2>
       <p class="lead" style="font-weight:300;max-width:76ch;color:var(--text-secondary)">任務：20 項商品中，替「腸胃敏感成犬」找一款 ≤NT$1,200、評分 ≥4.6、有現貨的主食加入購物車——同一隻 agent，跑兩種模式現場計時。</p>
     </div>
     <div class="duo-compare" style="margin-top:3.2vh">
@@ -1652,68 +1695,43 @@
   </div>
 </section>
 
-<!-- ============ 11 · S11 橫向時間線 · Demo 2（eForm 出差單 fill→確認送出） ============ -->
-<section class="slide light" data-animate="timeline-walk" data-layout="S11">
+<!-- ============ 12 · S08 Duo Compare · Demo 2 eForm × 安全分層（唯讀零風險 vs 有副作用要確認）============ -->
+<section class="slide light" data-animate="duo-mirror" data-layout="S08">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Demo 2 · DSC-eForm 簽核助理</div>
-      <div class="r">12 / 18</div>
+      <div class="r">13 / 18</div>
     </div>
-    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:1.8vh">
-      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-        <div class="t-meta">DEMO · WEBMCP × DSC-EFORM</div>
-        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1;letter-spacing:-.03em">AI 開單、填好，送出由你按</h2>
-        <p class="lead" style="font-weight:300;color:var(--text-secondary)">使用者已登入 eForm、在分頁裡對 AI 說：「下週一到三去台中見客戶 ACME，差旅費 8000，幫我開出差單。」</p>
+    <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+      <div class="t-meta">DEMO 2 · WEBMCP × DSC-EFORM · READ vs WRITE</div>
+      <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1.04;letter-spacing:-.03em">Demo 2：eForm — 唯讀零風險，送出要人確認</h2>
+      <p class="lead" style="font-weight:300;max-width:80ch;color:var(--text-secondary)">使用者已登入 eForm，對 AI 說「幫我開下週去台中見 ACME 的出差單」——但開放給 agent 的能力，要先分有沒有副作用。</p>
+    </div>
+    <div class="duo-compare" style="margin-top:3.2vh">
+      <div class="col">
+        <div class="col-tag"><span class="num">TIER 1</span><span>READ-ONLY · 唯讀</span></div>
+        <div class="col-ttl" style="font-size:min(3.4vw,6vh)">零風險開放</div>
+        <div class="col-desc">查詢類、唯讀能力，沒有副作用，agent 可以直接呼叫。</div>
+        <ul class="col-list">
+          <li>查待簽文件、查簽核關卡、查表單狀態</li>
+          <li>不改變資料，失敗也不留痕跡</li>
+          <li>可以大方開放，先讓 agent 讀得到流程現況</li>
+        </ul>
       </div>
-      <div class="timeline-h">
-        <div class="tl-row">
-          <div class="th-node up">
-            <span class="dot"></span>
-            <div class="label">
-              <span class="yr">01</span>
-              <span class="name">口述意圖</span>
-              <span class="desc">自然語言一句話，不必開選單找表單</span>
-            </div>
-          </div>
-          <div class="th-node down">
-            <span class="dot"></span>
-            <div class="label">
-              <span class="yr">02</span>
-              <span class="name">Discover</span>
-              <span class="desc">agent 看到頁面宣告的 fill_business_trip_form</span>
-            </div>
-          </div>
-          <div class="th-node up">
-            <span class="dot"></span>
-            <div class="label">
-              <span class="yr">03</span>
-              <span class="name">開單填表</span>
-              <span class="desc">自動開出差單(31)、把內容填進畫面 · 只填不送</span>
-            </div>
-          </div>
-          <div class="th-node down">
-            <span class="dot"></span>
-            <div class="label">
-              <span class="yr">04</span>
-              <span class="name">人工檢視</span>
-              <span class="desc">使用者在畫面上補完缺漏、確認內容</span>
-            </div>
-          </div>
-          <div class="th-node up accent">
-            <span class="dot"></span>
-            <div class="label">
-              <span class="yr">05</span>
-              <span class="name">確認送出</span>
-              <span class="desc">submit_current_form → 彈確認框，人按才真正送出</span>
-            </div>
-          </div>
-        </div>
+      <span class="vrule"></span>
+      <div class="col accent">
+        <div class="col-tag"><span class="num">TIER 2</span><span>SIDE-EFFECT · 有副作用</span></div>
+        <div class="col-ttl" style="font-size:min(3.4vw,6vh)">送出前要人類確認</div>
+        <div class="col-desc">寫入、送出類能力會改變資料，必須有把關。</div>
+        <ul class="col-list">
+          <li>開出差單、自動填內容——<strong style="font-weight:600;color:var(--accent)">只填不送</strong></li>
+          <li>submit 一定彈確認框，<strong style="font-weight:600;color:var(--accent)">人按才真正送出</strong></li>
+          <li>沿用已登入 OKTA session，不需 API key，並留稽核</li>
+        </ul>
       </div>
-      <div data-anim="up" style="display:grid;grid-template-columns:auto 1fr auto;gap:2vw;align-items:baseline;border-top:1px solid var(--border-subtle);padding-top:1.8vh">
-        <span class="t-cat accent">安全分層</span>
-        <span style="font-family:var(--sans),var(--sans-zh);font-size:max(18px,1.05vw);font-weight:500;color:var(--text-primary)">Tier 1 唯讀（查待簽、查關卡）零風險開放；Tier 2 有副作用（開單、送出）強制人類確認——agent 提效率，決策留給人。</span>
-        <span class="t-body-sm" style="font-weight:500;white-space:nowrap">tool 沿用已登入 OKTA session · 不需 API key</span>
-      </div>
+    </div>
+    <div style="margin-top:auto;padding-top:2vh;border-top:1px solid var(--border-subtle);display:flex;align-items:baseline">
+      <span class="t-body" style="font-weight:400">原則：agent 提效率，決策與送出留給人——這就是 WebMCP 在企業 eForm 的標準做法。</span>
     </div>
   </div>
 </section>
@@ -1725,52 +1743,12 @@
     <span class="dot-mat" style="position:absolute;right:0;top:0;width:32vw;height:34vw;color:rgba(255,255,255,.5)"></span>
     <div class="chrome-min">
       <div class="l">Thesis</div>
-      <div class="r">13 / 18</div>
+      <div class="r">14 / 18</div>
     </div>
     <div data-anim="line" class="t-meta" style="color:rgba(255,255,255,.6)">CAPABILITY CONTRACT, NOT UI GUESSING</div>
     <h1 data-anim="up" style="margin:auto 0;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5vw,8.8vh);line-height:1.22;letter-spacing:-.03em;max-width:78vw">不是讓 Agent 更會<span style="color:var(--accent-bright)">猜 UI</span>，<br>而是讓網站宣告<span style="font-style:italic;font-weight:300">自己的能力</span>。</h1>
     <div data-anim="bottom" style="display:flex;align-items:end;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh">
       <span class="t-body-sm" style="color:rgba(255,255,255,.72);max-width:52ch">UI 是一個 consumer，Agent tool 是另一個 consumer——它們呼叫同一組 domain capability。</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 09 · S08 Duo Compare · 場景光譜 ============ -->
-<section class="slide light" data-animate="duo-mirror" data-layout="S08">
-  <div class="canvas-card">
-    <div class="chrome-min">
-      <div class="l">Adoption · Where to Start</div>
-      <div class="r">14 / 18</div>
-    </div>
-    <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-meta">APPLICATION SCENARIOS · B2B / B2C</div>
-      <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.4vw,9.4vh);line-height:1;letter-spacing:-.03em">應用場景：內部系統 × 對外網站</h2>
-    </div>
-    <div class="duo-compare" style="margin-top:5vh">
-      <div class="col">
-        <div class="col-tag"><span class="num">B2B</span><span>FIRST WAVE · INTERNAL</span></div>
-        <div class="col-ttl" style="font-size:min(3.4vw,6vh)">企業內部系統先試</div>
-        <div class="col-desc">任務明確、流程固定、資料敏感——而且權限與表單驗證本來就有。Agent 透過明確 tool 進入既有流程。</div>
-        <ul class="col-list">
-          <li>請假、報支、採購、CRM、ERP、簽核</li>
-          <li>復用既有 validation 與 workflow</li>
-          <li>搭配 local model，降低敏感資料外送需求</li>
-        </ul>
-      </div>
-      <span class="vrule"></span>
-      <div class="col accent">
-        <div class="col-tag"><span class="num">B2C</span><span>ENDGAME · AGENT EXPERIENCE</span></div>
-        <div class="col-ttl" style="font-size:min(3.4vw,6vh)">對外網站的長期賽局</div>
-        <div class="col-desc">未來使用者不一定親自逛網站——他派 Agent 比價、篩選、預約、下單。</div>
-        <ul class="col-list">
-          <li>電商：搜尋商品、加入購物車、查訂單</li>
-          <li>訂票／旅遊：查場次、建立 booking intent</li>
-          <li><strong style="font-weight:600;color:var(--accent)">沒有 AX 的網站，會被 Agent 直接跳過</strong></li>
-        </ul>
-      </div>
-    </div>
-    <div style="margin-top:auto;padding-top:2vh;border-top:1px solid var(--border-subtle);display:flex;align-items:baseline">
-      <span class="t-body" style="font-weight:400">WebMCP 的價值不是取代既有的權限與驗證，而是讓 Agent 走進既有流程。</span>
     </div>
   </div>
 </section>
@@ -1886,7 +1864,7 @@
       <div style="width:80px;height:2px;background:var(--accent)"></div>
       <div style="display:flex;flex-direction:column;gap:1.4vh">
         <div class="t-meta">NOT PRODUCTION-BLIND YET</div>
-        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1;letter-spacing:-.03em">潛力很大，先保守設計</h2>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1;letter-spacing:-.03em">限制與風險</h2>
       </div>
     </div>
     <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4vw;margin-top:3.4vh;align-items:stretch">
